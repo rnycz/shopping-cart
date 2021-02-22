@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+body {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.row::before {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.main {
+  width: 75%;
+  float: left;
+  margin-left: 2rem;
+  margin-bottom: 4rem;
+}
+
+.main h1 {
+  margin-left: 1rem;
+}
+
+.panel {
+  width: 25%;
+  float: left;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  margin-bottom: 4rem;
+  background-color: #3f3f3f;
+  border-radius: 0 0 0 15px;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px gray;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d8d8d8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c9c9c9;
+}
+
+/*Filter start*/
+.filter-box {
+  width: 70%;
+  margin: 2rem auto 0rem auto;
+}
+
+.filter {
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: #eeeaea;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+}
+
+.filter:hover {
+  transition: all 0.5s;
+  background-color: #d8d8d8;
+}
+
+.filter-content {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: none;
+  background-color: #eeeaea;
+  border-radius: 0 0 5px 5px;
+  border-top: 1px dashed gray;
+}
+
+.filter-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.filter-content ul li {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox:hover input ~ .checkmark {
+  background-color: #06b406;
+}
+
+.checkbox input:checked ~ .checkmark {
+  background-color: green;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+  display: inline;
+}
+
+.checkbox .checkmark::after {
+  left: 7.5px;
+  top: 7.5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+}
+
+/*Filter end*/
+/*Basket start*/
+.basket-box {
+  width: 70%;
+  margin: 2rem auto 2rem auto;
+}
+
+.basket {
+  background-color: #eeeaea;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.basket #total, .basket #total-mobile {
+  font-weight: bold;
+}
+
+.basket .sum-items, .basket div {
+  font-size: 1.2rem;
+}
+
+.basket .checkout {
+  font-size: 1.2rem;
+  border: none;
+  background-color: #06b406;
+  border-radius: 10px;
+  padding: 10px;
+  width: auto;
+  margin-top: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.basket .checkout:hover {
+  background-color: green;
+  transition: all 0.5s;
+}
+
+.clear-btn {
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: chocolate;
+  font-size: 1rem;
+  width: fit-content;
+  margin: auto;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  transition: all 0.5s;
+  background-color: #b65815;
+}
+
+/*Basket end*/
+/*Product card start*/
+.test {
+  width: 0;
+  height: 0;
+}
+
+.product-row {
+  float: left;
+  width: 25%;
+  margin: 1rem;
+}
+
+.product-card {
+  background-color: white;
+  box-shadow: 0 0px 10px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  max-width: 250px;
+  height: auto;
+  text-align: center;
+  margin: auto;
+  padding: 1rem;
+}
+
+.product-card img {
+  max-width: 70%;
+}
+
+.product-card h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.product-card p {
+  font-size: 1.2rem;
+}
+
+.product-card .product-price::before {
+  content: '$';
+}
+
+.product-card .product-price::after {
+  content: '/piece';
+}
+
+.product-card .product-price-total {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.product-card .product-price-total::before {
+  content: 'Sum: $';
+}
+
+.number-input {
+  display: inline-flex;
+}
+
+.number-input input {
+  border: 1px solid #d8d5d5;
+  border-radius: 5px;
+  max-width: 4rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  height: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.number-input input:hover {
+  border: 1px solid #868585;
+}
+
+.number-input input::-webkit-outer-spin-button, .number-input input::-webkit-inner-spin-button {
+  cursor: pointer;
+}
+
+.product-in-basket {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+}
+
+/*Product card end*/
+/*Footer start*/
+footer {
+  font-size: 0.9rem;
+  text-align: center;
+  border-top: 1px solid black;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+footer p {
+  margin: 0.5rem;
+}
+
+footer p a {
+  text-decoration: none;
+  color: green;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
+/*Footer end*/
+/*Mobile panel start*/
+.mobile-panel {
+  display: none;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  text-align: center;
+  font-size: 2rem;
+  background-image: linear-gradient(180deg, #a1a1a1, white);
+  z-index: 1;
+}
+
+.mobile-panel i {
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  margin-top: 2rem;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal-content {
+  display: none;
+}
+
+.modal-content.active {
+  display: block;
+}
+
+.modal-content .close-modal {
+  font-size: 4rem;
+  cursor: pointer;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  margin-top: 1rem;
+}
+
+/*Mobile panel end*/
+@media only screen and (max-width: 1000px) {
+  .product-card h1 {
+    font-size: 1.3rem;
+  }
+  .product-card p {
+    font-size: 1.1rem;
+  }
+  .product-card .product-price-total {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .main {
+    width: 100%;
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+  .main h1 {
+    text-align: center;
+    margin-left: 0;
+  }
+  .product-row {
+    width: 100%;
+    margin-left: 0;
+  }
+  .panel {
+    display: none;
+  }
+  .mobile-panel {
+    display: block;
+  }
+}

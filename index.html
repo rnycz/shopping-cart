@@ -1,0 +1,306 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Shopping cart</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="mobile-panel">
+            <i class="fas fa-bars open-modal"></i>
+        </div>
+        <div class="modal">
+            <div class="modal-content">
+                <div class="basket-box">
+                    <div class="basket">
+                        <p class="sum-items">No items in your bag</p>
+                        <div class="total-value" id="subtotal-mobile">Subtotal: $0.00</div>
+                        <div class="total-value" id="shipping-mobile">Shipping: $0.00</div>
+                        <div class="total-value" id="total-mobile">Total: $0.00</div>
+                        <button class="checkout">Checkout</button>
+                    </div>
+                </div>
+                <div class="clear-btn">
+                    Clear your bag
+                </div>
+                <div class="filter-box">
+                    <div class="filter">
+                        <span class="filter-icon">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                        <span class="filter-text">
+                            Show filters                     
+                        </span>
+                    </div>
+                    <div class="filter-content">
+                        <ul>
+                            <li>
+                                <label class="checkbox">All
+                                    <input type="radio" name="radio" checked value="all" class="filter-choose">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox">Fruit
+                                    <input type="radio" name="radio" value="fruit" class="filter-choose">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox">Meat
+                                    <input type="radio" name="radio" value="meat" class="filter-choose">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox">Fish
+                                    <input type="radio" name="radio" value="fish" class="filter-choose">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>  
+                </div>
+              <i class="fas fa-times close-modal"></i>
+          </div>
+        </div>
+        <div class="main">
+            <div class="category fruit all">
+                <div class="row">
+                    <h1>Fruits</h1>
+                    <div class="product-row">
+                        <div class="product-card">
+                            <img src="https://assets.sainsburys-groceries.co.uk/gol/1196757/1/300x300.jpg" alt="banana">
+                            <h1>Banana</h1>
+                            <p class="product-price">0.20</p>
+                            <div class="number-input">
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <div class="product-price-total">0.00</div>
+                        </div>
+                    </div> 
+                    <div class="product-row">
+                        <div class="product-card">
+                            <img src="https://assets.sainsburys-groceries.co.uk/gol/1191851/1/300x300.jpg" alt="apple">
+                            <h1>Apple</h1>
+                            <p class="product-price">0.15</p>
+                            <div class="number-input">
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <div class="product-price-total">0.00</div>
+                        </div>
+                    </div>
+                    <div class="product-row">
+                        <div class="product-card">
+                            <img src="https://assets.sainsburys-groceries.co.uk/gol/93/1/300x300.jpg" alt="lemon">
+                            <h1>Lemon</h1>
+                            <p class="product-price">0.20</p>
+                            <div class="number-input">
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <div class="product-price-total">0.00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="product-row">
+                        <div class="product-card">
+                            <img src="https://assets.sainsburys-groceries.co.uk/gol/6012710/1/300x300.jpg" alt="grapes">
+                            <h1>Grapes</h1>
+                            <p class="product-price">2.00</p>
+                            <div class="number-input">
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <div class="product-price-total">0.00</div>
+                        </div>
+                    </div>
+                    <div class="product-row">
+                        <div class="product-card">
+                            <img src="https://assets.sainsburys-groceries.co.uk/gol/1197563/1/300x300.jpg" alt="orange">
+                            <h1>Orange</h1>
+                            <p class="product-price">1.49</p>
+                            <div class="number-input">
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <div class="product-price-total">0.00</div>
+                        </div>
+                    </div>
+                    <div class="product-row">
+                        <div class="product-card">
+                            <img src="https://assets.sainsburys-groceries.co.uk/gol/6621757/1/300x300.jpg" alt="pears">
+                            <h1>Pears</h1>
+                            <p class="product-price">1.49</p>
+                            <div class="number-input">
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <div class="product-price-total">0.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category meat all">
+                <div class="row">
+                    <h1>Meats</h1>
+                    <div class="product-row">
+                        <div class="product-card meat all">
+                            <img src="https://assets.sainsburys-groceries.co.uk/gol/54010/1/300x300.jpg" alt="chicken">
+                            <h1>Chicken</h1>
+                            <p class="product-price">7.99</p>
+                            <div class="number-input">
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <div class="product-price-total">0.00</div>
+                        </div>
+                    </div>
+                    <div class="product-row">
+                        <div class="product-card">
+                            <img src="https://assets.sainsburys-groceries.co.uk/gol/7877995/1/300x300.jpg" alt="chicken wings">
+                            <h1>Chicken wings</h1>
+                            <p class="product-price">4.49</p>
+                            <div class="number-input">
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <div class="product-price-total">0.00</div>
+                        </div>
+                    </div> 
+                    <div class="product-row">
+                        <div class="product-card">
+                            <img src="https://assets.sainsburys-groceries.co.uk/gol/17091/1/300x300.jpg" alt="chicken breast">
+                            <h1>Chicken breast</h1>
+                            <p class="product-price">4.99</p>
+                            <div class="number-input">
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <div class="product-price-total">0.00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="product-row">
+                        <div class="product-card">
+                            <img src="https://assets.sainsburys-groceries.co.uk/gol/7542971/1/300x300.jpg" alt="beef mince">
+                            <h1>Beef mince</h1>
+                            <p class="product-price">5.49</p>
+                            <div class="number-input">
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <div class="product-price-total">0.00</div>
+                        </div>
+                    </div>
+                    <div class="product-row">
+                        <div class="product-card">
+                            <img src="https://assets.sainsburys-groceries.co.uk/gol/7103166/1/300x300.jpg" alt="british ham">
+                            <h1>British ham</h1>
+                            <p class="product-price">1.49</p>
+                            <div class="number-input">
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <div class="product-price-total">0.00</div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="category fish all">
+                <div class="row">
+                    <h1>Fishes</h1>
+                    <div class="product-row">
+                        <div class="product-card">
+                            <img src="https://assets.sainsburys-groceries.co.uk/gol/7253595/1/300x300.jpg" alt="fish filet">
+                            <h1>Fish filet</h1>
+                            <p class="product-price">5.99</p>
+                            <div class="number-input">
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <div class="product-price-total">0.00</div>
+                        </div>
+                    </div>
+                    <div class="product-row">
+                        <div class="product-card">
+                            <img src="https://assets.sainsburys-groceries.co.uk/gol/6447344/1/300x300.jpg" alt="salmon">
+                            <h1>Salmon</h1>
+                            <p class="product-price">9.99</p>
+                            <div class="number-input">
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <div class="product-price-total">0.00</div>
+                        </div>
+                    </div>
+                    <div class="product-row">
+                        <div class="product-card">
+                            <img src="https://assets.sainsburys-groceries.co.uk/gol/7549868/1/300x300.jpg" alt="salmon">
+                            <h1>Prawns</h1>
+                            <p class="product-price">3.99</p>
+                            <div class="number-input">
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <div class="product-price-total">0.00</div>
+                        </div>
+                    </div>
+                </div>   
+            </div>                             
+        </div>
+        <div class="panel">
+            <div class="basket-box">
+                <div class="basket">
+                    <p class="sum-items">No items in your bag</p>
+                    <div class="total-value" id="subtotal">Subtotal: $0.00</div>
+                    <div class="total-value" id="shipping">Shipping: $0.00</div>
+                    <div class="total-value" id="total">Total: $0.00</div>
+                    <button class="checkout">Checkout</button>
+                </div>
+            </div>
+            <div class="clear-btn">
+                Clear your bag
+            </div>
+            <div class="filter-box">
+                <div class="filter filter-mobile">
+                    <span class="filter-icon">
+                        <i class="fas fa-eye"></i>
+                    </span>
+                    <span class="filter-text">
+                        Show filters                     
+                    </span>
+                </div>
+                <div class="filter-content">
+                    <ul>
+                        <li>
+                            <label class="checkbox">All
+                                <input type="radio" name="radio" checked value="all" class="filter-choose">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox">Fruit
+                                <input type="radio" name="radio" value="fruit" class="filter-choose">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox">Meat
+                                <input type="radio" name="radio" value="meat" class="filter-choose">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox">Fish
+                                <input type="radio" name="radio" value="fish" class="filter-choose">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>  
+            </div>  
+        </div>
+        <div class="row">
+            <footer>
+                <p><i class="far fa-copyright"></i> Radosław Nycz
+                    <a href="https://github.com/rnycz" target="_blank">Github</a>
+                </p>
+            </footer>      
+        </div>       
+    </body>
+</html>
